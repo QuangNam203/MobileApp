@@ -1,0 +1,773 @@
+.gridLeft,
+.gridRight,
+.gridContainer,
+.gridStack
+{
+    height: 100%;
+}
+
+.wrapperImage {
+    width: 100%;
+    height: 400px;
+    background: antiquewhite;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+}
+
+.wrapperImage:hover .buttons{
+    opacity: 1;
+}
+
+.wrapperImage .list{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transition: 1s;
+}
+
+.wrapperImage .list .item{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    transition: 1s;
+}
+.wrapperImage .list .item.active{
+    opacity: 1;
+}
+.wrapperImage .list img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.wrapperImage .buttons{
+    opacity: 0;
+    position: absolute;
+    top: 45%;
+    left: 5%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    transition: 0.5s;
+}
+
+.wrapperImage .buttons button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff5;
+    color: #fff;
+    border: none;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.feature {
+    width: 100%;
+    height: 80px;
+    display: flex;
+}
+
+.feature .infeat,
+.feature .feattab,
+.feature .infeat img{
+    height: 70px;
+    width: 70px;
+    margin: 0 10px;
+    /* float: left; */
+}
+.feature .feattab{
+    margin: 0 10px 0 0;
+}
+.feature .infeat img{
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.feature::-webkit-scrollbar{
+    width: 0;
+}
+
+.feature .infeat.active img{
+    border: 2px solid rgb(173, 204, 63);
+}
+
+.contact-c{
+    width: 100%;
+    font-size: 13px;
+}
+
+.contact-c .contact-l{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgba(80, 78, 78, 0.219);
+    color: rgba(0, 0, 0, 0.658);
+}
+.contact-c .contact-l-ct{
+    display: flex;
+    margin: 10px 0;
+}
+.contact-c .contact-l-ct ion-icon{
+    width: 20%;
+    font-size: 20px;
+}
+.contact-c .contact-l-ct:nth-child(3) ion-icon{
+    width: 10%;
+}
+.contact-c .contact-l-ct:nth-child(5) ion-icon{
+    width: 8%;
+}
+
+.contact-c .contact-r .btn-l,
+.contact-c .contact-r .select-container .select-box{
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid rgba(82, 78, 78, 0.39);
+}
+.gridRight .contact-r{
+    height: 100%;
+    position: relative;
+    border-radius: 3px;
+}
+.contact-r .hotAddress{
+    width: 100%;
+    height: 80%;
+    position: absolute;
+    top: 20%;
+    border-radius: 3px;
+    overflow: hidden;
+    border: 1px solid rgba(104, 102, 102, 0.322);
+    background-color: #b3b3b328;
+}
+.contact-r .hotAddress .list::-webkit-scrollbar{
+    width: 10px;
+}
+.contact-r .hotAddress .list::-webkit-scrollbar {
+    width: 5px;
+    background-color: #b3b3b3;
+}
+
+.contact-r .hotAddress .list::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #fdf6f6;
+	border-radius: 10px;
+}
+
+.contact-r .hotAddress .list::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+	background-image: -webkit-gradient(linear,
+									   left bottom,
+									   left top,
+									   color-stop(0.44, rgba(122, 154, 217, 0.658)),
+									   color-stop(0.72, rgba(73, 125, 189, 0.747)),
+									   color-stop(0.86, rgba(28, 58, 148, 0.568)));
+}
+.contact-r .hotAddress .list{
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+}
+.contact-r .hotAddress .title-add{
+    padding: 10px;
+    width: 100%;
+    overflow: hidden;
+}
+.contact-r .hotAddress .title-add span{
+    width: 130%;
+    display: flex;
+}
+.option-accessory{
+    display: flex;
+    font-size: 11px;
+    font-weight: bold;
+}
+.option-accessory .product-item-acces {
+    padding: 10px;
+    background: #e3e3e3;
+    border-radius: 6px;
+    margin-right: 20px;
+}
+
+.accessory {
+    width: 100%;
+    height: 300px;
+    position: relative;
+}
+.list-item-acces {
+    height: 250px;
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+    top: 15%;
+    left: 0;
+}
+.list-item-acces .buttons{
+    position: absolute;
+    top: 45%;
+    left: 2%;
+    width: 97%;
+    display: flex;
+    justify-content: space-between;
+    transition: 0.5s;
+}
+.list-item-acces .buttons button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(177, 177, 177, 0.678);
+    color: #504d4d;
+    border: none;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 20px;
+
+}
+.list-item-acces .list-item{
+    width: 200%;
+    height: 100%;
+    display: flex;
+}
+.item-acces {
+    width: 180px;
+    height: 248px;
+    background: #fff(243, 242, 245);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 1px 7px 0px #5151517d;
+    text-align: center;
+    margin: 0 10px;
+    position: relative;
+}
+.item-acces p{
+    font-size: 14px;
+    font-weight: 400;
+    color: #5e5b5b;
+}
+.item-acces h3{
+    color: red;
+}
+.item-acces img{
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+}
+
+button.add-ass {
+    font-weight: bold;
+    padding: 8px 22px;
+    border: none;
+    border-radius: 10px;
+    background: red;
+    color: white;
+    font-size: 11px;
+}
+
+/* right */
+.gridRight .product-memory
+{
+    display: flex;
+}
+
+.product-style>p{
+    margin-left: 5px;
+    font-weight: bold;
+    font-size: 15px;
+    color: #363636e7;
+}
+
+.product-style .list{
+    width: 100%;
+}
+.product-memory .memory,
+.product-style .list .item{
+    margin:  0 5px;
+    padding: 10px 38.5px;
+    text-align: center;
+    background-color: #e3e3e350;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.274);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.product-style .list .item{
+    float: left;
+    margin-top: 10px;
+}
+
+.product-memory .memory.active,
+.product-style .list .item.active{
+    border: 1px solid red;
+}
+
+.product-memory .memory span,
+.product-style .list .item span
+{
+    font-size: 12px;
+    font-weight: bold;
+}
+.product-memory .memory p,
+.product-style .list .item p{
+    font-size: 12px;
+    display: flex;
+}
+.product-memory .memory .check-m,
+.product-style .list .item .check-p{
+    opacity: 0;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-bottom-left-radius: 50%;
+}
+.product-memory .memory .check-m.active,
+.product-style .list .item .check-p.active{
+    opacity: 1;
+}
+
+.wrap-type {
+    display: flex;position: relative;
+    background: #c7c7c780;
+    height: 70px;border-radius: 5px;}
+
+.wrap-type .type
+{
+    width: 50%;
+    display: flex;
+    height: 80%;
+    transition: 0.5s;
+    margin: 7px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.wrap-type .type.active{
+    border: 1px solid red;
+    background-color: white;
+}
+.wrap-type .type:hover{
+    background-color: white;
+}
+
+.wrap-type .type img 
+{height: 50px;width: 50px;object-fit: cover;}
+
+.wrap-type .type .text
+{
+    font-size: 13px;
+    padding-left: 10px;
+}
+.wrap-type .type:nth-child(2) .text{
+    margin: auto;
+    margin-bottom: 7px;
+}
+.wrap-type .type:nth-child(2) .text del{
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.651);
+}
+
+.kit-voucher {
+    background: #c7c7c780;;
+    height: 50px;
+    font-size: 13px;
+    border-radius: 5px;
+}
+
+.kit-voucher p,.kit-voucher u {
+    margin-left: 10px;
+    margin-top: 7px;
+}
+
+.kit-voucher u,
+.kit-voucher p span{
+    color: red;
+}
+.kit-voucher p span{
+    font-weight: bold;
+}
+
+.voucher {
+    height: 100px;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.356);
+}
+
+.v-1 {
+    width: 100%;
+    display: flex;
+    height: 40%;
+    background: rgba(248, 181, 192, 0.973);
+    padding-top: 6px;
+    padding-left: 5px;
+    color: red;
+}
+
+.v-1 ion-icon {
+    font-size: 24px;
+}
+
+.v-2 {
+    width: 100%;
+    height: 60%;
+    display: flex;
+}
+
+.v-2 span {
+    width: 20px;
+    height: 20px;
+    background: red;
+    margin: 20px 5px;
+    border-radius: 50%;
+    text-align: center;
+    color: white;
+    font-size: 13px;
+}
+.v-2 a{
+    font-size: 14px;
+    margin: 20px 5px;
+}
+
+.buy {
+    width: 100%;
+    height: 50px;
+}
+
+.buy .pay{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    border: none;
+    background: #e33535;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.buy {
+    width: 100%;
+    height: 50px;
+}
+
+.addCart {
+    background: antiquewhite;
+    border-radius: 5px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.addCart ion-icon {
+    font-size: 25px;
+    margin-left: 15px;
+    margin-top: 5px;
+}
+
+.addCart p {
+    font-size: 8px;
+    color: black;
+    font-weight: bold;
+    margin-left: 3px;
+}
+
+.installment button,
+.reold button {
+    border: none;
+    width: 100%;
+    height: 60px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    background: #004cff;
+}
+.reold button{
+    background-color: rgb(224, 147, 3);
+}
+
+
+.product-list-swiper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.swuper-list {
+    width: 100%;
+    position: relative;
+    height: 100%;
+}
+
+.swuper-list .item{
+    width: 21%;
+    height: 390px;
+    margin: 23px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 16px 1px #e3d7d7;
+    overflow: hidden;
+    float: left;
+}
+
+.swuper-list .item:hover{
+    box-shadow: 0px 0px 10px 0px #62959f
+}
+
+.swuper-list .item img {
+    height: 50%;
+    display: inline-block;
+    width: 100%;
+}
+
+.swuper-list .item .Overview {
+    height: 10%;
+    line-height: 35px;
+}
+
+.swuper-list .item .Overview span{
+    padding: 5px;
+    background-color: rgb(235, 245, 245);
+    border: 1px solid rgb(189, 189, 189);
+    border-radius: 10px;
+    font-size: 9px;
+    font-weight: bold;
+    margin: 0 10px;
+}
+.swuper-list .item .nameItem{
+    height: 10%;
+    display: inline-block;
+    width: 100%;
+}
+
+.swuper-list .item .nameItem span{
+    width: 90%;
+    display: inline-block;
+    height: 100%;
+    margin: 0px 11px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.swuper-list .item .price {
+    height: 8%;
+    display: flex;
+    margin: 0 10px;
+}
+
+.swuper-list .item .price span{
+    font-size: 17px;
+    font-weight: bold;
+    color: red;
+}
+
+.swuper-list .item .price del{
+    font-size: 10px;
+    font-weight: bold;
+    color: #367070;
+    line-height: 20px;
+    margin-left: 5px;
+}
+
+.swuper-list .item .note {
+    width: 90%;
+    height: 11%;
+    background: rgb(222, 235, 235);
+    margin: auto;
+    border-radius: 10px;
+}
+
+.swuper-list .item .note p {
+    display: inline-block;
+    font-size: 10px;
+    padding: 0 10px;
+    font-weight: bold;
+    color: #494c4c;
+}
+
+.swuper-list .item .cmt {
+    height: 10%;
+    display: flex;
+}
+
+.swuper-list .item .cmt .op{
+    width: 57%;
+    line-height: 42px;
+}
+.swuper-list .item .cmt .op .buy{
+    float: left;
+    /* transform: translateX(-100%); */
+    font-size: 15px;
+    font-weight: bold;
+    color: red
+}
+
+.swuper-list .item .cmt .op .iconBuy{
+    display: inline-block;
+    font-size: 25px;
+    color: #293092;
+}
+.swuper-list .item .cmt .op .iconBuy:hover ion-icon:nth-child(1){
+    color: red;
+}
+.swuper-list .item .cmt .op .iconBuy:hover ion-icon:nth-child(2){
+    color: red;
+}
+
+
+.swuper-list .item .cmt span.favourite {
+    width: 43%;
+    font-size: 14px;
+    line-height: 42px;
+    color: #8e9193;
+    display: flex;
+}
+
+.swuper-list .item .cmt span .heart{
+    width: 12px;
+    height: 12px;
+    background-color: red;
+    position: relative;
+    transform: rotate(-45deg);
+    box-shadow: -10px 10px 90px red;
+    top: 40%;
+    left: 10%;
+    z-index: 1;
+}
+
+.swuper-list .item .cmt span .heart:hover{
+    animation: heart 0.6s linear infinite;
+}
+
+@keyframes heart {
+    0%{
+        transform: rotate(-45deg) scale(1.2);
+    }
+    80%{
+        transform: rotate(-45deg) scale(1.0);
+    }
+    100%{
+        transform: rotate(-45deg) scale(0.8);
+    }
+}
+
+.swuper-list .item .cmt span .heart::before{
+    content: '';
+    position: absolute;
+    height: 12px;
+    width: 12px;
+    background-color: red;
+    top: -50%;
+    border-radius: 50%;
+    box-shadow: -10px 10px 90px red;
+    
+}
+.swuper-list .item .cmt span .heart::after{
+    content: '';
+    position: absolute;
+    height: 12px;
+    width: 12px;
+    background-color: red;
+    right: -50%;
+    border-radius: 50%;
+    box-shadow: -10px 10px 90px red;
+}
+
+.product-list-swiper .buttons{
+    position: absolute;
+    top: 45%;
+    left: 5%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    transition: 0.5s;
+}
+.product-list-swiper .buttons button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(41, 6, 6, 0.333);
+    color: #1d0101;
+    border: none;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.promotion {
+    width: 100%;
+    height: 400px;
+}
+.categy {
+    width: 100%;
+    height: 70%;
+    display: inline-block;
+    border-radius: 10px;
+    border: 1px solid #abaaaa;
+    overflow: hidden;
+}
+
+.categy label {
+    display: inline-block;
+    width: 100%;
+    height: 14%;
+    background: #c9c9c9;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 38px;
+    padding-left: 10px;
+}
+
+.list {
+    height: 84%;
+}
+
+.list ul {
+    height: 100%;
+}
+
+.list ul li {
+    height: 16%;
+    list-style: none;
+}
+.list ul li a{
+    font-size: 12px;
+    margin-left: 5px;
+    text-decoration: none;
+}
+.list ul li a:hover{
+    text-decoration:underline;
+}
+.list ul li ion-icon{
+    color: green;
+}
+
+.warranty {
+    display: flex;
+    border: 1px solid #c7c7c7;
+    border-radius: 10px;
+}
+
+.warranty .note a {
+    font-size: 11px;
+    padding-left: 10px;
+    color: red;
+}
+
+.warranty .note p {
+    font-size: 12px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+.warranty ion-icon {
+    width: 40%;
+    font-size: 34px;
+    margin-top: 10px;
+}

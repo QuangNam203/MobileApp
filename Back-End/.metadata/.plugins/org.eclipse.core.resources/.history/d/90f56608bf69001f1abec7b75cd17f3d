@@ -1,0 +1,14 @@
+package BE.Service;
+
+import java.util.List;
+
+import BE.Entity.order;
+import BE.Form.createOrderForm;
+
+public interface IOrderService {
+	
+	public List<order> getAll();
+	
+	public void createOrder(createOrderForm form);
+	
+}

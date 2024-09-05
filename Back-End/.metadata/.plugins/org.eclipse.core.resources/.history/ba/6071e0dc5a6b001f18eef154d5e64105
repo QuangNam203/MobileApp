@@ -1,0 +1,21 @@
+package BE.Repository;
+
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
+
+import BE.Entity.product;
+
+@Repository
+public interface IProductRepository extends JpaRepository<product, Integer>, JpaSpecificationExecutor<product>{
+	
+	@Query(value = "SELECT *  FROM `product` WHERE status = 'F'",nativeQuery = true)
+	public Page<product> getAllProduct(Pageable pageable);
+	
+	@Query(value = "SELECT *  FROM `product` WHERE name Like '%?1%'", nativeQuery = true)
+	public Page<product> getAllTypeProduct(Pageable pageable);
+	
+}

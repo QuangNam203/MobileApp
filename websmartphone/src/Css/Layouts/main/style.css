@@ -1,0 +1,7 @@
+main{
+    margin-top: 8%;
+    /* height: 1600px; */
+}
+main .content>div{
+    height: 100%;
+}

@@ -1,0 +1,5 @@
+package BE.Entity;
+
+public class RefreshToken {
+
+}

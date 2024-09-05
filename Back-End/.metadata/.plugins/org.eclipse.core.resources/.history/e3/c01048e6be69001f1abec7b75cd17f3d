@@ -1,0 +1,9 @@
+package BE.Service;
+
+import BE.Form.createOrderForm;
+
+public interface IOrderService {
+	
+	public void createOrder(createOrderForm form);
+	
+}

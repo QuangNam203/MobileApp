@@ -1,0 +1,15 @@
+package BE.Repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.stereotype.Repository;
+
+import BE.Entity.RefreshToken;
+
+@Repository
+@EnableJpaRepositories
+public interface IRefreshTokenRepository extends JpaRepository<Repository, Integer>{
+
+	RefreshToken save(RefreshToken refreshToken);
+
+}

@@ -1,0 +1,34 @@
+package BE.Service.Impl;
+
+import java.util.List;
+
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import BE.Entity.order;
+import BE.Form.createOrderForm;
+import BE.Repository.IOrderRepository;
+import BE.Service.IOrderService;
+
+@Service
+public class orderServiceImpl implements IOrderService{
+
+	@Autowired
+	private ModelMapper mapper;
+	
+	@Autowired
+	private IOrderRepository iOrderRepository;
+	
+	@Override
+	public void createOrder(createOrderForm form) {
+		order order = mapper.map(form, order.class);
+		iOrderRepository.save(order);
+	}
+
+	@Override
+	public List<order> getAll() {
+		return iOrderRepository.findAll();
+	}
+	
+}

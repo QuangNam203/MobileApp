@@ -1,0 +1,28 @@
+package BE.Controller;
+
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import BE.Form.createOrderForm;
+import BE.Service.IOrderService;
+
+@RestController
+@RequestMapping("api/v1/order")
+public class orderController {
+	
+	@Autowired
+	private ModelMapper mapper;
+	
+	@Autowired
+	private IOrderService iOrderService;
+	
+	@PostMapping("/orderForm")
+	private void createOrder(@RequestBody createOrderForm form) {
+		iOrderService.createOrder(form);
+	}
+	
+}

@@ -1,0 +1,10 @@
+package BE.DTO;
+
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+public class onceProductDTO {
+
+}

@@ -1,0 +1,5 @@
+package BE.Repository;
+
+public interface IOrderRepository {
+
+}

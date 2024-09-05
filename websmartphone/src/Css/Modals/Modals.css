@@ -1,0 +1,68 @@
+.container-modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 350px;
+    height: 400px;
+    background-color: burlywood;
+    border-radius: 3px;
+    
+}
+.container-modal .search-m{
+    width: 90%;
+    height: 20%;
+    display: inline-block;
+    position: absolute;
+    left: 5%;
+}
+.container-modal .listAddres-modal{
+    position: absolute;
+    width: 90%;
+    height: 80%;
+    top: 20%;
+    left: 5%;
+}
+
+.container-modal .listAddres-modal p{
+    font-weight: 600;
+    font-size: 12px;
+    color: #717171;
+    margin-bottom: 10px;
+}
+.container-modal .listAddres-modal button{
+    padding: 10px 50.5px 10px 50.5px;
+    margin: 0 5px;
+    border: none;
+    border-bottom: 1px solid #b9aaaa;
+    border-radius: 3px;
+}
+
+.container-modal .listAddres-modal button:hover{
+    background-color: red;
+}
+.container-modal .listAddres-modal .address-option{
+    width: 100%;
+    height: 85%;
+    overflow-y: auto;
+}
+.container-modal .listAddres-modal .address-option::-webkit-scrollbar {
+    width: 5px;
+    background-color: #b3b3b3;
+}
+
+.container-modal .listAddres-modal .address-option::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #fdf6f6;
+	border-radius: 10px;
+}
+
+.container-modal .listAddres-modal .address-option::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+	background-image: -webkit-gradient(linear,
+									   left bottom,
+									   left top,
+									   color-stop(0.44, rgba(122, 154, 217, 0.658)),
+									   color-stop(0.72, rgba(73, 125, 189, 0.747)),
+									   color-stop(0.86, rgba(28, 58, 148, 0.705)));
+}
